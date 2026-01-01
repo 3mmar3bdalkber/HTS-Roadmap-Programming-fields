@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-https://3mmar3bdalkber.github.io/How-To-Start-Roadmap/index.html
+https://3mmar3bdalkber.github.io/HTS-Roadmap-Programming-fields/
 
 ---
 
@@ -38,25 +38,18 @@ https://3mmar3bdalkber.github.io/How-To-Start-Roadmap/index.html
 
 ```bash
 How-To-Start-Roadmap/
-├─ basic.html              
-├─ assets               
+├─ index.html             
+├─ blue-team.html
+├─ cyber.html
+├─ data-analysis.html
+├─ flutter.html
+├─ red-team.html       
+├─ web.html          
 ├─ css/                    
 ├─ js/                    
 └─ README.md
 ```
----
 
-## Quickstart
-
-```bash
-# 1) Clone
-git clone https://github.com/Ammar-Abdalkber/How-To-Start-Roadmap.git
-cd How-To-Start-Roadmap
-
-# 2) Open in browser
-# - Open basic.html directly for live demo
-# - Or host with GitHub Pages
-```
 ---
 
 ## Roadmap
