@@ -1,0 +1,1033 @@
+/* الالوان المستخدمه اهي */
+:root {
+  --bg: #0a0a12;
+  --card: #0f0f1a;
+  --muted: #8b8b9e;
+  --accent: #6366f1;
+  --blue: #0ea5e9;
+  --red: #ef4444;
+  --green: #10b981;
+  --purple: #a855f7;
+  --teal: #14b8a6;
+  /* Styles Shadow */
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --neon-blue: 0 0 10px rgba(14, 165, 233, 0.7), 0 0 20px rgba(14, 165, 233, 0.5), 0 0 30px rgba(14, 165, 233, 0.3);
+  --neon-red: 0 0 10px rgba(239, 68, 68, 0.7), 0 0 20px rgba(239, 68, 68, 0.5), 0 0 30px rgba(239, 68, 68, 0.3);
+  --neon-purple: 0 0 10px rgba(168, 85, 247, 0.7), 0 0 20px rgba(168, 85, 247, 0.5), 0 0 30px rgba(168, 85, 247, 0.3);
+  --neon-green: 0 0 10px rgba(16, 185, 129, 0.7), 0 0 20px rgba(16, 185, 129, 0.5), 0 0 30px rgba(16, 185, 129, 0.3);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f1f5f9;
+  min-height: 100vh;
+  position: relative;
+}
+/* --------------------------------------------------- */
+/* تنظيم مكان ال 
+nav 
+*/
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 28px;
+  background: rgba(10, 10, 18, 0.8);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  position: relative;
+}
+
+/* AZ icon */
+.brand {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: var(--neon-purple);
+  animation: ani 4s infinite;
+}
+
+/* SIZE Scale  */
+@keyframes ani {
+  /* ST */
+  0% {
+    transform: scale(1);
+  }
+  /* MID */
+  50% {
+    transform: scale(1.3);
+  }
+  /* END, Back again */
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------- */
+
+/*  REALLY WE ARE HTS TEAM WITHOUT GPT,MARO,TAHA,AHMED */
+
+/* EL ZATONA  logo Word*/
+.title ,.accent{
+  font-weight: 700;
+  font-size: 1.6rem;
+  /* to combine two colors */
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  /* clip 
+    لاظهار النص . هي حاليا جسم ملون*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+.accent{
+  font-size: 3rem;
+}
+
+/* --------------------------------------------------- */
+
+/* for all links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* nav bar */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.nav a:hover::before {
+  left: 100%;
+}
+
+/* حتة ال
+ACTIVE
+for Now Page */
+.nav a.active {
+  background: rgba(99, 102, 241, 0.2);
+  box-shadow: var(--neon-purple);
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  /* mouse Style */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+/* first mouse hover */
+.btn:hover::before {
+  left: 100%;
+}
+
+/* GET STARTED Button */
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--neon-purple);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.8), 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+/* RED TEAM Button */
+.btn.red {
+  background: var(--red);
+  color: #fff;
+  box-shadow: var(--neon-red);
+}
+
+.btn.red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.8), 0 0 30px rgba(239, 68, 68, 0.5);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 18px;
+  position: relative;
+  z-index: 10;
+}
+
+.cta {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* CARD TRANSFORM */
+
+/* Unv SIZE */
+.HTS {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.HTS-right .card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+@media (min-width: 800px) {
+  .HTS {
+    grid-template-columns: 1fr 420px;
+  }
+
+  .HTS-left h1 {
+    font-size: 40px;
+  }
+
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 3D Card Flip Animation */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
+  box-shadow: var(--neon-purple);
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: var(--neon-purple);
+}
+
+/* start inside Card */
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* --------------------------------------------------- */
+/* Rabea Css */
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.track {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  min-height: 320px;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin: 0 auto;
+}
+
+.track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.track:hover::before {
+  transform: translateX(100%);
+}
+
+.track:hover {
+  transform: translateY(-10px) rotateY(5deg);
+}
+
+.img-track {
+  width: 100%;
+  height: 35%;
+  background-size: cover;
+  background-position: center;
+}
+
+.track-body {
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.track-body .disc-track {
+  color: #C0C0C0;
+}
+
+.track-body .track-feature {
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 16px;
+  color: #c0C0C0;
+}
+
+.track-body .track-feature li {
+  padding-left: 22px;
+  position: relative;
+}
+
+.track-body .track-feature li::before {
+  content: "• ";
+  color: #FD4228;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.track-body .track-butt {
+  background-color: #FD4228;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.track-body .track-butt:hover {
+  background-color: #ff5c3d;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------- */
+/* footer */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  color: var(--muted);
+  margin-top: 50px;
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.foot a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+/* links on footer */
+.foot a:hover {
+  color: var(--accent);
+}
+
+/* Social Media Styles */
+.social-media {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* to make social icons in out */
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.social-icon.github {
+  background: #333;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.7);
+}
+
+.social-icon.linkedin {
+  background: #0077b5;
+  box-shadow: 0 0 10px rgba(0, 119, 181, 0.7);
+}
+
+.social-icon.twitter {
+  background: #1da1f2;
+  box-shadow: 0 0 10px rgba(29, 161, 242, 0.7);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------- */
+/* Cyber, Blue Team, Red Team Styles */
+.split {
+  /* To spilt */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.panel {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+}
+
+/* Shadow in Back */
+/* Blue panel */
+.blue-panel {
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.1), rgba(16, 16, 32, 0.8));
+  box-shadow: var(--neon-blue);
+}
+/* red Panel */
+.red-panel {
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.1), rgba(16, 16, 32, 0.8));
+  box-shadow: var(--neon-red);
+}
+
+.list {
+  margin: 12px 0 18px;
+  padding: 0;
+}
+
+.list li {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(30, 30, 46, 0.6);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.cyber-container {
+  position: relative;
+
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.blue-hover {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.2));
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.red-hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.2));
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.blue-panel:hover .blue-hover ,.red-panel:hover .red-hover{
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+
+.blue-panel:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2), var(--neon-blue);
+}
+
+.red-panel:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.2), var(--neon-red);
+}
+
+/* hover on list inside */
+.blue-panel .list li:hover {
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.1));
+  border-left: 4px solid var(--blue);
+  transform: translateX(10px) scale(1.02);
+}
+
+.red-panel .list li:hover {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.1));
+  border-left: 4px solid var(--red);
+  transform: translateX(10px) scale(1.02);
+}
+
+
+.panel h2 {
+  /* for line under */
+  position: relative;
+  display: inline-block;
+}
+
+/* word Blue and Red */
+.blue-panel h2::after , .red-panel h2::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.blue-panel:hover h2::after {
+  background: var(--blue);
+  width: 100%;
+}
+.red-panel:hover h2::after {
+  background: var(--red);
+  width: 100%;
+}
+
+/* --------------------------------------------------- */
+/* Web & Data Pages */
+.track-section {
+  margin: 40px auto;
+  padding: 40px 50px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  text-align: left;
+}
+
+.track-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.track-section p.muted {
+  font-size: 17px;
+  color: #f6f6f6;
+  max-width: 800px;
+}
+
+/* Track Progress Bar */
+.track-progress {
+  width: 100%;
+  max-width: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.track-progress-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  height: 14px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.track-progress-fill {
+  height: 100%;
+  width: 14%;
+  background: white;
+  border-radius: 20px;
+    transition: width 0.4s ease,
+     background-color 0.3s ease;
+
+}
+
+.track-progress-label {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Special progress bars for Blue/Red Team */
+
+.header-section {
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-section p {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* Steps timeline */
+.steps {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  margin-left: 40px;
+  z-index: 1;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 45px;
+  top: 60px;
+  width: 4px;
+  height: calc(100% - 120px);
+  background: #e3c7ff;
+  border-radius: 2px;
+  z-index: 0;
+    background: linear-gradient(
+    to bottom,
+    rgba(168, 85, 247, 0.15),
+    rgba(168, 85, 247, 0.05)
+  );
+  z-index: 0;
+}
+
+.step {
+  background: var(--card);
+  padding: 25px;
+  margin-top: 25px ;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.step:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid white;
+  transition: transform 0.3s ease;
+}
+
+.step.active::after {
+  transform: rotate(180deg);
+}
+
+
+/* Different border colors for different tracks */
+.cyber-page .step:hover {
+  border-left-color: var(--blue);
+}
+
+.data-page .step:hover {
+  border-left-color: var(--green);
+}
+
+.web-page .step:hover {
+  border-left-color: var(--purple);
+}
+
+.flutter-page .step:hover {
+  border-left-color: var(--teal);
+}
+
+/* Step number styling */
+.step .number {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+   border: 3px solid #D1D5DC;
+  transition: all 0.3s ease;
+}
+
+
+/* Content area */
+.step .content {
+  flex: 1;
+}
+
+.step h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: white;
+}
+
+.step p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Step button styling */
+.step-btn {
+  display: inline-block;
+  background: var(--accent);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.step-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.data .step-btn {
+  background: var(--green);
+}
+
+.data .step-btn:hover {
+  background: #34d399;
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+}
+
+.web .step-btn {
+  background: var(--purple);
+}
+
+.web .step-btn:hover {
+  background: #a874ff;
+  box-shadow: 0 4px 12px rgba(168, 116, 255, 0.3);
+}
+
+
+.flutter-page .step-btn {
+  background: var(--teal);
+}
+
+.flutter-page .step-btn:hover {
+  background: #2dd4bf;
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+}
+
+.flutter-page .step:hover {
+  border-left-color: var(--teal);
+}
+.notes-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--purple);
+  opacity: 0.9;
+}
+/**/
+.content1 {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    padding 0.25s ease;
+
+  margin-left: 20px;        
+ position: relative;
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 30, 0.95),
+    rgba(10, 10, 18, 0.98)
+  );
+
+  border-left: 2px solid var(--purple);
+  border-radius: 0 0 14px 14px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(99,102,241,0.12),
+    0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content1 li {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.content1 li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  opacity: 0.8;
+  font-size: 14px;
+}
+.step.open {
+  border-left-color: var(--purple);
+  box-shadow: 0 12px 30px rgba(168,85,247,0.12);
+}
+
+.step.open + .content1 {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 14px 20px;
+}
+
+
+
+/* --------------------------------------------------- */
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .tracks {
+    gap: 18px;
+  }
+  .track {
+    max-width: 100%;
+    min-height: 300px;
+  }
+  .track-body {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .nav {
+    gap: 8px;
+  }
+  .nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+
+/*  */
+.step .number.current {
+  border: 2px solid var(--teal);
+  background: rgba(20, 184, 166, 0.08);
+  border-color: #7c7cff;
+
+}
+.step .number.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.step .number.active {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+
