@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
 /* --------------------------------------------------- */
 /* تنظيم مكان ال 
 nav 
@@ -62,14 +63,17 @@ nav
 
 /* SIZE Scale  */
 @keyframes ani {
+
   /* ST */
   0% {
     transform: scale(1);
   }
+
   /* MID */
   50% {
     transform: scale(1.3);
   }
+
   /* END, Back again */
   100% {
     transform: scale(1);
@@ -81,7 +85,8 @@ nav
 /*  REALLY WE ARE HTS TEAM WITHOUT GPT,MARO,TAHA,AHMED */
 
 /* EL ZATONA  logo Word*/
-.title ,.accent{
+.title,
+.accent {
   font-weight: 700;
   font-size: 1.6rem;
   /* to combine two colors */
@@ -92,7 +97,8 @@ nav
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
 }
-.accent{
+
+.accent {
   font-size: 3rem;
 }
 
@@ -526,6 +532,67 @@ for Now Page */
   margin-top: 22px;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+/* ensure panels are full-width inside grid */
+.split .panel {
+  width: 100%;
+}
+
+/* stacked layout for narrower screens */
+@media (max-width: 800px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  /* default mobile order: blue then red.
+     Use .split.reverse on the container to swap the two panels. */
+  .split .blue-panel {
+    grid-row: 1;
+  }
+
+  .split .red-panel {
+    grid-row: 2;
+  }
+
+  .split.reverse .blue-panel {
+    grid-row: 2;
+  }
+
+  .split.reverse .red-panel {
+    grid-row: 1;
+  }
+
+  /* smaller paddings so panels fit nicely */
+  .split .panel {
+    padding: 14px;
+  }
+
+  .blue-panel,
+  .red-panel {
+    transform: none;
+    box-shadow: var(--shadow);
+  }
+}
+
+/* additional tweaks for very small screens */
+@media (max-width: 480px) {
+  .split {
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .split .panel {
+    padding: 12px;
+    border-radius: 10px;
+  }
+}
+
 .panel {
   padding: 20px;
   border-radius: 12px;
@@ -543,6 +610,7 @@ for Now Page */
   background: linear-gradient(180deg, rgba(14, 165, 233, 0.1), rgba(16, 16, 32, 0.8));
   box-shadow: var(--neon-blue);
 }
+
 /* red Panel */
 .red-panel {
   background: linear-gradient(180deg, rgba(239, 68, 68, 0.1), rgba(16, 16, 32, 0.8));
@@ -594,7 +662,8 @@ for Now Page */
   border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
-.blue-panel:hover .blue-hover ,.red-panel:hover .red-hover{
+.blue-panel:hover .blue-hover,
+.red-panel:hover .red-hover {
   opacity: 1;
   transform: scale(1.02);
 }
@@ -631,7 +700,8 @@ for Now Page */
 }
 
 /* word Blue and Red */
-.blue-panel h2::after , .red-panel h2::after{
+.blue-panel h2::after,
+.red-panel h2::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -645,6 +715,7 @@ for Now Page */
   background: var(--blue);
   width: 100%;
 }
+
 .red-panel:hover h2::after {
   background: var(--red);
   width: 100%;
@@ -709,8 +780,8 @@ for Now Page */
   width: 14%;
   background: white;
   border-radius: 20px;
-    transition: width 0.4s ease,
-     background-color 0.3s ease;
+  transition: width 0.4s ease,
+    background-color 0.3s ease;
 
 }
 
@@ -759,18 +830,16 @@ for Now Page */
   background: #e3c7ff;
   border-radius: 2px;
   z-index: 0;
-    background: linear-gradient(
-    to bottom,
-    rgba(168, 85, 247, 0.15),
-    rgba(168, 85, 247, 0.05)
-  );
+  background: linear-gradient(to bottom,
+      rgba(168, 85, 247, 0.15),
+      rgba(168, 85, 247, 0.05));
   z-index: 0;
 }
 
 .step {
   background: var(--card);
   padding: 25px;
-  margin-top: 25px ;
+  margin-top: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -835,7 +904,7 @@ for Now Page */
   font-size: 18px;
   font-weight: bold;
   flex-shrink: 0;
-   border: 3px solid #D1D5DC;
+  border: 3px solid #D1D5DC;
   transition: all 0.3s ease;
 }
 
@@ -907,6 +976,7 @@ for Now Page */
 .flutter-page .step:hover {
   border-left-color: var(--teal);
 }
+
 .notes-title {
   font-size: 13px;
   font-weight: 600;
@@ -914,6 +984,7 @@ for Now Page */
   color: var(--purple);
   opacity: 0.9;
 }
+
 /**/
 .content1 {
   max-height: 0;
@@ -926,21 +997,19 @@ for Now Page */
     transform 0.25s ease,
     padding 0.25s ease;
 
-  margin-left: 20px;        
- position: relative;
+  margin-left: 20px;
+  position: relative;
   z-index: 3;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 15, 30, 0.95),
-    rgba(10, 10, 18, 0.98)
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 15, 30, 0.95),
+      rgba(10, 10, 18, 0.98));
 
   border-left: 2px solid var(--purple);
   border-radius: 0 0 14px 14px;
 
   box-shadow:
-    inset 0 0 0 1px rgba(99,102,241,0.12),
-    0 10px 25px rgba(0,0,0,0.25);
+    inset 0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .content1 ul {
@@ -965,12 +1034,13 @@ for Now Page */
   opacity: 0.8;
   font-size: 14px;
 }
+
 .step.open {
   border-left-color: var(--purple);
-  box-shadow: 0 12px 30px rgba(168,85,247,0.12);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.12);
 }
 
-.step.open + .content1 {
+.step.open+.content1 {
   max-height: 220px;
   opacity: 1;
   transform: translateY(0);
@@ -985,10 +1055,12 @@ for Now Page */
   .tracks {
     gap: 18px;
   }
+
   .track {
     max-width: 100%;
     min-height: 300px;
   }
+
   .track-body {
     font-size: 13px;
     padding: 10px;
@@ -1000,6 +1072,7 @@ for Now Page */
   .nav {
     gap: 8px;
   }
+
   .nav a {
     padding: 6px 10px;
     font-size: 14px;
@@ -1018,6 +1091,7 @@ for Now Page */
   border-color: #7c7cff;
 
 }
+
 .step .number.disabled {
   pointer-events: none;
   opacity: 0.4;
@@ -1029,5 +1103,3 @@ for Now Page */
   border-color: #10b981;
   color: white;
 }
-
-
